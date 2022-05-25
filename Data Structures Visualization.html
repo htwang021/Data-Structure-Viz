@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://graphicalstructure.org/Playground/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Data Structures Visualization</title>
+   <link rel="icon" href="https://graphicalstructure.org/Playground/favicon.png" type="image/png" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Data Structures Vizualization.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://graphicalstructure.org/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Data Structures Visualization">
+<meta property="og:description" content="Data Structures Visualization.">
+<meta property="og:url" content="https://graphicalstructure.org">
+<meta property="og:site_name" content="Data Structures Visualization">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data Structures Visualization">
+<meta name="twitter:description" content="Data Structures Visualization.">
+<script src="./Data Structures Visualization_files/f.txt"></script><script src="./Data Structures Visualization_files/f(1).txt" id="google_shimpl"></script><script type="application/ld+json" class="rank-math-schema">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "EducationalOrganization",
+            "@id": "https://graphicalstructure.org/#organization",
+            "name": "Data Structures Visualization",
+            "url": "https://graphicalstructure.org",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://graphicalstructure.org/Playground/logo1.png"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://graphicalstructure.org/#website",
+            "url": "https://graphicalstructure.org",
+            "name": "Data Structures Visualization",
+            "publisher": {
+                "@id": "https://graphicalstructure.org#organization"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://blog.graphicalstructure.org/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "CollectionPage",
+            "@id": "https://graphicalstructure.org/#webpage",
+            "url": "https://graphicalstructure.org/",
+            "name": "Data Structures Visualization",
+            "about": {
+                "@id": "https://graphicalstructure.org/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://graphicalstructure.org/#website"
+            },
+            "inLanguage": "en-US"
+        }
+    ]
+}</script>
+<script async="" src="./Data Structures Visualization_files/f(2).txt" crossorigin="anonymous" data-checked-head="true"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+ * {
+	 box-sizing: border-box;
+	 font-weight: normal;
+}
+
+ body {
+	 color: #555;
+	 background: #fff;
+	 text-align: center;
+	 font-family: 'segoe ui';
+	 padding: 1em;
+}
+ h1 {
+	 font-size: 2.2em;
+}
+ .flip {
+	 position: relative;
+}
+ .flip > .front, .flip > .back {
+	 display: block;
+	 transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	 transition-duration: 1s;
+	 transition-property: transform, opacity;
+}
+ .flip > .front {
+	 transform: rotateY(0deg);
+}
+ .flip > .back {
+	 position: absolute;
+	 opacity: 0;
+	 top: 0px;
+	 left: 0px;
+	 width: 100%;
+	 height: 100%;
+	 transform: rotateY(-180deg);
+}
+ .flip:hover > .front {
+	 transform: rotateY(180deg);
+}
+ .flip:hover > .back {
+	 opacity: 1;
+	 transform: rotateY(0deg);
+}
+ .flip.flip-vertical > .back {
+	 transform: rotateX(-180deg);
+}
+ .flip.flip-vertical:hover > .front {
+	 transform: rotateX(180deg);
+}
+ .flip.flip-vertical:hover > .back {
+	 transform: rotateX(0deg);
+}
+ .flip {
+	 position: relative;
+	 display: inline-block;
+	 margin-right: 2px;
+	 margin-bottom: 1em;
+	 width: 400px;
+}
+ .flip > .front, .flip > .back {
+	 display: block;
+	 color: coral;
+	 width: inherit;
+	 background-size: cover !important;
+	 background-position: center !important;
+	 height: 220px;
+	 padding: 1em 2em;
+	 background: #313131;
+	 border-radius: 10px;
+}
+ .flip > .front p, .flip > .back p {
+	 font-size: 0.9125rem;
+	 line-height: 160%;
+	 color: #999;
+}
+ .text-shadow {
+
+position: absolute;
+
+
+
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Data Structures Visualization_files/css2" rel="stylesheet">
+
+
+<meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="./Data Structures Visualization_files/f(3).txt" as="script"><script type="text/javascript" src="./Data Structures Visualization_files/f(3).txt"></script></head>
+<body>
+  <!-- horizontal
+
+<h4>Horizontal Flip</h4>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">MOUNTAIN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">LAKE</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">OCEAN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+vertical -->
+<div style="text-align: center;">
+<h1 onclick="location.href=&#39;/&#39;" style="cursor:pointer; font-size:60px; font-weight: 900; font-family: &#39;Roboto&#39;, sans-serif;">Graphical Structure</h1>
+</div>
+<section id="mainbody">
+<div class="flip flip-vertical" onclick="location.href=&#39;./Conway&#39;;">
+   <div class="front" style="text-align: center;">
+      <h1 class="text-shadow">Conway's Game of Life</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/Conway.png)">
+      
+      
+   </div>
+ </div>
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./Array&#39;;">
+
+    <div class="front">
+       <h1 class="text-shadow">Array</h1>
+    </div>
+    <div class="back" style="background-image: url(thumbnails/array.png)">
+    
+    </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./SortBars&#39;;">
+
+   <div class="front">
+      <h1 class="text-shadow">Sorting (Bar Graph)</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/bar.png)">
+   
+   </div>
+</div>
+
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./LinkedList&#39;;">
+    <div class="front">
+       <h1 class="text-shadow">Linked List</h1>
+    </div>
+    <div class="back" style="background-image: url(thumbnails/LL.png)">
+
+    </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./Stack&#39;;">
+    <div class="front">
+       <h1 class="text-shadow">Stack</h1>
+    </div>
+    <div class="back" style="background-image: url(thumbnails/stackll.png)">
+       
+       
+    </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./Queue&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Queue</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/queuell.png)">
+     
+     
+  </div>
+</div>
+
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./BST&#39;;">
+    <div class="front">
+       <h1 class="text-shadow">Binary Search Tree</h1>
+    </div>
+    <div class="back" style="background-image: url(thumbnails/BST.png)">
+       
+       
+    </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./AVL&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">AVL Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/avl.png)">
+     
+     
+  </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./Splay&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Splay Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/splay.png)">
+     
+     
+  </div>
+</div><div class="flip flip-vertical" onclick="location.href=&#39;./RedBlack&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Red Black Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/rb.png)">
+     
+     
+  </div>
+</div><div class="flip flip-vertical" onclick="location.href=&#39;./BTree&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">B Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/btree.png)">
+     
+     
+  </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./Heap&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Max Heap</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/heap.png)">
+     
+     
+  </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./MinHeap&#39;;">
+   <div class="front">
+      <h1 class="text-shadow">Min Heap</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/minheap.png)">
+      
+      
+   </div>
+ </div>
+ 
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./Priorityqueue&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Priority Queue</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/pq.png)">
+     
+     
+  </div>
+</div><div class="flip flip-vertical" onclick="location.href=&#39;./Graph&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Graph</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/graph.png)">
+     
+     
+  </div>
+</div><div class="flip flip-vertical" onclick="location.href=&#39;./Trie&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Trie</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/trie.png)">
+     
+     
+  </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./TOH&#39;;">
+   <div class="front" style="text-align: center;">
+      <h1 class="text-shadow">Tower of Hanoi problem</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/toh.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href=&#39;./FactRecursion&#39;;">
+   <div class="front" style="text-align: center;">
+      <h1 class="text-shadow">Factorial (Recursion)</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/placehold.png)">
+      
+      
+   </div>
+ </div>
+
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./ShuntingYard&#39;;">
+  <div class="front">
+     <h1 class="text-shadow">Shunting-Yard Algorithm</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/sy.png)">
+     
+     
+  </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./Huffman&#39;;">
+   <div class="front">
+      <h1 class="text-shadow">Huffman Coding</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/huff.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href=&#39;./naiveSM&#39;;">
+   <div class="front">
+      <h1 class="text-shadow">Naïve String Matching Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/nsm.png)">
+      
+      
+   </div>
+ </div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./RabinKarp&#39;;">
+   <div class="front">
+      <h1 class="text-shadow">Rabin-Karp Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/RK.png)">
+      
+      
+   </div>
+ </div>
+
+ <div class="flip flip-vertical" onclick="location.href=&#39;./KnuthMorris&#39;;">
+   <div class="front">
+      <h1 class="text-shadow">Knuth-Morris-Pratt</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/KMP.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href=&#39;./BoyerMoore&#39;;">
+   <div class="front">
+      <h1 class="text-shadow">Boyer-Moore Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/Boyer.png)">
+      
+      
+   </div>
+ </div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./DP&#39;;">
+  <div class="front" style="text-align: center;">
+     <h1 class="text-shadow">Dynamic<br>Programming</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/dp.png)">
+     
+     
+  </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./CORDIC&#39;;">
+   <div class="front" style="text-align: center;">
+      <h1 class="text-shadow">CORDIC<br>Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/volder.png)">
+      
+      
+   </div>
+ </div>
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./nQueen&#39;;">
+   <div class="front" style="text-align: center;">
+      <h1 class="text-shadow">N Queen | Backtrack</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/nqueen.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href=&#39;./Sudoku&#39;;">
+   <div class="front" style="text-align: center;">
+      <h1 class="text-shadow">Sudoku | Backtrack</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/sudoku.png)">
+      
+      
+   </div>
+ </div>
+
+
+
+<div class="flip flip-vertical" onclick="location.href=&#39;./TreeAdjustmentAlgorithm&#39;;">
+  <div class="front" style="text-align: center;">
+     <h1 class="text-shadow">Tree Adjustment Algorithm<br>(Explaination)</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/adjust.png)">
+     
+     
+  </div>
+</div>
+
+</section>
+
+ 
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_0_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Data Structures Visualization_files/ads.html" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins><iframe src="./Data Structures Visualization_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./Data Structures Visualization_files/zrt_lookup.html" style="display: none;"></iframe></html>
